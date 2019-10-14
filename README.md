@@ -27,6 +27,8 @@ Abra o terminal dentro da pasta raiz do projeto, e execute o seguinte comando:
 ```
 docker-compose up
 ````
+
+## Ingestão de dados
 Para poder fazer a ingestão dos dados primeiro é necessário acessar o client no navegador por meio da rota:
 
 ```
@@ -36,3 +38,26 @@ http:\\localhost:9091
 Feito isso, entre no notebook do CQL, e crie uma conexão, utilize o nome do container do servidor como host (my-server).
 
 Após a conexão ser estabelecida, copie o conteúdo que está em ```schema.cql``` e cole em uma ```cell```, esse passo irá criar o keyspace e a tabela.
+
+Para carregar os dados dentro do banco copie o arquivo cvs desejado e cole dentro do container do servidor com o seguinte comando:
+
+```
+docker cp arquivo.csv my-server:/opt/dse/arquivo.csv
+```
+
+Feito isso, entre no container do servidor com o comando:
+
+```
+docker exec -it my-server sh
+```
+
+Acesse o cqlsh digitando ```cqlsh```.
+
+Agora para carregar os dados presentes dentro do arquivo csv que foi copiado para dentro do container do servidor, primeiro é necessário utilizar o keyspace criado anteriormente com o comando ```use db;```, pois db é o nome do keyspace criado no conteúdo copiado de schema.cql.
+
+Feito isso basta carregar os dados com o comando:
+
+```
+COPY tableName(column1, column2, ...) FROM ‘arquivo.csv’ WITH DELIMITER=',' AND HEADER=TRUE;
+```
+Dentro do arquivo injestion.txt existe um exemplo desse mesmo comando.
