@@ -16,9 +16,11 @@ Neste primeiro trabalho, vamos explorar Bancos de Dados noSQL. A ideia é que ca
 
 6. Elabore um relatório comparando as duas abordagens (apresentando vantagens e desvantagens, pontos fortes e fracos) e analisando pelo menos os seguintes quesitos:
 
-6.1 Ingestão de Dados
-6.2 Linguagem de Consulta
-6.3 Tempo de Processamento
+* 6.1 Ingestão de Dados
+* 6.2 Linguagem de Consulta
+* 6.3 Tempo de Processamento
+
+Este trabalho consiste do uso do banco de dados NoSQL Cassandra rodando em um container docker a través de um servidor chamado DataStax, e usando como client o DataStax Studio.
 
 ## Instruções para execução
 
