@@ -1,5 +1,7 @@
 # Trabalho de implementação 1 da disciplina Hybrid Transaction Analytical Processing
+
 #Enunciado
+
 Neste primeiro trabalho, vamos explorar Bancos de Dados noSQL. A ideia é que cada grupo ou indivíduo realize uma análise simples de criminalidade usando um dataset de dados de crimes da cidade de Denver, Colorado, EUA. Passos a seguir:
 
 1. Faça o download do arquivo anexo (denver-crime-data.zip). Esse arquivo zip contém uma série de arquivos, mas o principal é o crime.csv que contém todas as instâncias de crimes da cidade de Denver.
