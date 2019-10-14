@@ -1,6 +1,6 @@
 # Trabalho de implementação 1 da disciplina Hybrid Transaction Analytical Processing
 
-##Enunciado
+## Enunciado
 
 Neste primeiro trabalho, vamos explorar Bancos de Dados noSQL. A ideia é que cada grupo ou indivíduo realize uma análise simples de criminalidade usando um dataset de dados de crimes da cidade de Denver, Colorado, EUA. Passos a seguir:
 
@@ -20,11 +20,19 @@ Neste primeiro trabalho, vamos explorar Bancos de Dados noSQL. A ideia é que ca
 6.2 Linguagem de Consulta
 6.3 Tempo de Processamento
 
-##Instruções para execução
+## Instruções para execução
 
 Abra o terminal dentro da pasta raiz do projeto, e execute o seguinte comando:
 
-
-
 ```
 docker-compose up
+````
+Para poder fazer a ingestão dos dados primeiro é necessário acessar o client no navegador por meio da rota:
+
+```
+http:\\localhost:9091
+```
+
+Feito isso, entre no notebook do CQL, e crie uma conexão, utilize o nome do container do servidor como host (my-server).
+
+Após a conexão ser estabelecida, copie o conteúdo que está em ```schema.cql``` e cole em uma ```cell```, esse passo irá criar o keyspace e a tabela.
