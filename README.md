@@ -22,6 +22,12 @@ Neste primeiro trabalho, vamos explorar Bancos de Dados noSQL. A ideia é que ca
 
 Este trabalho consiste do uso do banco de dados NoSQL Cassandra rodando em um container docker a través de um servidor chamado DataStax, e usando como client o DataStax Studio.
 
+## Manipulação dos dados
+
+É necessário que seja adicionada a coluna id no arquivo csv para a geração de um identificador único para cada linha.
+
+Para isso execute o script python ```uuid_generator.py```.
+
 ## Remoção de timeouts
 
 Por padrão, os valores de timeout definidos pelo cassandra são muito pequenos, resultando em timeouts no cluster e no client. O arquivo ```cassandra.yaml``` possui valores customizados que resolver o problema em questão para este trabalho, se desejar valores diferentes é só editar esse arquivo.
@@ -70,6 +76,8 @@ Para carregar os dados dentro do banco copie o arquivo cvs desejado e cole dentr
 ```
 docker cp arquivo.csv my-server:/opt/dse/arquivo.csv
 ```
+
+Sendo ```arquivo.csv``` o arquivo csv presente na pasta raíz desse projeto.
 
 Feito isso, entre no container do servidor com o comando:
 

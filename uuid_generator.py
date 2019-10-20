@@ -13,7 +13,7 @@ writer = csv.writer(fout, delimiter=',', quotechar='"')
 firstrow = True
 for row in reader:
     if firstrow:
-        row.append('UUID')
+        row.append('ID')
         firstrow = False
     else:
         row.append(uuid.uuid4())
