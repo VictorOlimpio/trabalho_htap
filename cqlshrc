@@ -1,0 +1,4 @@
+[connection]
+client_timeout = None
+# Can also be set to None to disable:
+# client_timeout = None
