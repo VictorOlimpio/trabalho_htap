@@ -84,6 +84,6 @@ Agora para carregar os dados presentes dentro do arquivo csv que foi copiado par
 Feito isso basta carregar os dados com o comando:
 
 ```
-COPY tableName(column1, column2, ...) FROM ‘arquivo.csv’ WITH DELIMITER=',' AND HEADER=TRUE;
+COPY tableName(column1, column2, ...) FROM 'arquivo.csv' WITH DELIMITER=',' AND HEADER=TRUE;
 ```
 Dentro do arquivo injestion.txt existe um exemplo desse mesmo comando.
