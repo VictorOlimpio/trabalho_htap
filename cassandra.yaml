@@ -770,20 +770,20 @@ read_request_timeout_in_ms: 200000
 # How long the coordinator should wait for seq or index scans to complete.
 # Lowest acceptable value is 10 ms. This timeout does not apply to
 # aggregated queries such as SELECT COUNT(*), MIN(x), etc.
-range_request_timeout_in_ms: 10000
+range_request_timeout_in_ms: 100000
 # How long the coordinator should wait for aggregated read operations to complete,
 # such as SELECT COUNT(*), MIN(x), etc.
-aggregated_request_timeout_in_ms: 120000
+aggregated_request_timeout_in_ms: 120000000
 # How long the coordinator should wait for writes to complete.
 # Lowest acceptable value is 10 ms.
-write_request_timeout_in_ms: 200000
+write_request_timeout_in_ms: 2000000
 # How long the coordinator should wait for counter writes to complete.
 # Lowest acceptable value is 10 ms.
-counter_write_request_timeout_in_ms: 5000
+counter_write_request_timeout_in_ms: 50000
 # How long a coordinator should continue to retry a CAS operation
 # that contends with other proposals for the same row.
 # Lowest acceptable value is 10 ms.
-cas_contention_timeout_in_ms: 1000
+cas_contention_timeout_in_ms: 10000
 # How long the coordinator should wait for truncates to complete
 # The long default value allows the database to take a snapshot before removing the data.
 # If auto_snapshot is disabled (not recommended), you can reduce this time.
@@ -791,7 +791,7 @@ cas_contention_timeout_in_ms: 1000
 truncate_request_timeout_in_ms: 60000
 # The default timeout for other, miscellaneous operations.
 # Lowest acceptable value is 10 ms.
-request_timeout_in_ms: 10000
+request_timeout_in_ms: 100000
 # Additional RTT latency between DCs applied to cross dc request. Set this property only when
 # cross dc network latency is high. Value must be non-negative.
 # Set this value to 0 to apply no additional RTT latency. When unset, the default is 0.
@@ -1222,7 +1222,7 @@ continuous_paging:
     # server queue is full or the client has not required any more pages via a backpressure update request.
     # Increase this value for extremely large page sizes (max_page_size_mb)
     # or for extremely slow networks.
-    client_timeout_sec: 200000
+    client_timeout_sec: 2000000
     # How long the server waits for a cancel request to complete, in seconds.
     cancel_timeout_sec: 5
     # How long the server will wait, in milliseconds, before checking if a continuous paging session can be resumed when
