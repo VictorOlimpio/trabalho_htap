@@ -53,6 +53,9 @@ http:\\localhost:9091
 
 Feito isso, entre no notebook do CQL, e crie uma conexão, utilize o nome do container do servidor como host (my-server).
 
+(https://github.com/VictorOlimpio/trabalho_htap/blob/master/notebooks.png)
+
+
 Após a conexão ser estabelecida, copie o conteúdo que está em ```schema.cql``` e cole em uma ```cell```, esse passo irá criar o keyspace e a tabela.
 
 Para carregar os dados dentro do banco copie o arquivo cvs desejado e cole dentro do container do servidor com o seguinte comando:
