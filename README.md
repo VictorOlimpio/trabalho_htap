@@ -51,7 +51,17 @@ Para poder fazer a ingestão dos dados primeiro é necessário acessar o client 
 http:\\localhost:9091
 ```
 
-Feito isso, entre no notebook do CQL, e crie uma conexão, utilize o nome do container do servidor como host (my-server).
+Feito isso, entre no notebook do CQL.
+
+![Dashboard de notebooks](https://github.com/VictorOlimpio/trabalho_htap/blob/master/notebooks.png)
+
+Crie uma conexão. 
+
+![Criação de conexão](https://github.com/VictorOlimpio/trabalho_htap/blob/master/edit_connection.png)
+
+Utilize o nome do container do servidor como host (my-server).
+
+![Edição](https://github.com/VictorOlimpio/trabalho_htap/blob/master/connection.png)
 
 Após a conexão ser estabelecida, copie o conteúdo que está em ```schema.cql``` e cole em uma ```cell```, esse passo irá criar o keyspace e a tabela.
 
@@ -74,6 +84,6 @@ Agora para carregar os dados presentes dentro do arquivo csv que foi copiado par
 Feito isso basta carregar os dados com o comando:
 
 ```
-COPY tableName(column1, column2, ...) FROM ‘arquivo.csv’ WITH DELIMITER=',' AND HEADER=TRUE;
+COPY tableName(column1, column2, ...) FROM 'arquivo.csv' WITH DELIMITER=',' AND HEADER=TRUE;
 ```
 Dentro do arquivo injestion.txt existe um exemplo desse mesmo comando.
