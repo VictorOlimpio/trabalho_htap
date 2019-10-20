@@ -22,6 +22,20 @@ Neste primeiro trabalho, vamos explorar Bancos de Dados noSQL. A ideia é que ca
 
 Este trabalho consiste do uso do banco de dados NoSQL Cassandra rodando em um container docker a través de um servidor chamado DataStax, e usando como client o DataStax Studio.
 
+## Remoção de timeouts
+
+Por padrão, os valores de timeout definidos pelo cassandra são muito pequenos, resultando em timeouts no cluster e no client. O arquivo ```cassandra.yaml``` possui valores customizados que resolver o problema em questão para este trabalho, se desejar valores diferentes é só editar esse arquivo.
+
+Para aplicar essas configurações é necessário copiar esse arquivo para dentro do container, logo primeiro o container precisa estar sendo executado, execute ```docker-compose up```antes. 
+
+Copie o arquivo ```cassandra.yaml```para dentro do conaiter com o comando:
+
+``` 
+docker cp cassandra.yaml my-server:/opt/dse/resources/cassandra/conf/cassandra.yaml
+````
+
+Para ter certeza de que essas configurações estão de fato aplicadas interrompa a execução do container e execute-o novamente.
+
 ## Instruções para execução
 
 Abra o terminal dentro da pasta raiz do projeto, e execute o seguinte comando:
