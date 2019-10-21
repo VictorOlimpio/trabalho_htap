@@ -20,6 +20,6 @@ CREATE TABLE IF NOT EXISTS db.crimes (
     NEIGHBORHOOD_ID varchar,
     IS_CRIME varchar,
     IS_TRAFFIC varchar,
-    UUID uuid,
+    ID uuid,
     PRIMARY KEY((ID))
 );
